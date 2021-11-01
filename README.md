@@ -65,4 +65,4 @@ Builds the app for production to the `build` folder.\
 - Global handling of the Error
 - `Enzyme` and `jest-fetch-mock` used to make the unit testing and api testing.
 
-
+###### Approx it takes 5hrs to complete this UI BASED GIF APPLICATION
