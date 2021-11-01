@@ -1,17 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+/* eslint-disable */
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import dotenv from "dotenv";
+import { fetchConfigs } from './consts';
+import "antd/dist/antd.css";
+import "./index.css";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+dotenv.config();
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+fetchConfigs().then(() => {
+  import('./App').then(({ default: App }) => render(App))
+});
+
+const render = (App) => {
+  return ReactDOM.render(<App/>, document.getElementById('root'))
+};
 reportWebVitals();

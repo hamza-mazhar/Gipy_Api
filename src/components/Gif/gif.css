@@ -1,0 +1,19 @@
+.image_container{
+    position: relative;
+}
+.image {
+    opacity: 1;
+    display: block;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    cursor:pointer
+}
+
+.image_container:hover .image {
+    opacity: 0.3;
+}
+
+.image_container:hover .middle {
+    opacity: 1;
+}
